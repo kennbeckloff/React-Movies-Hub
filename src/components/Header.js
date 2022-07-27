@@ -8,7 +8,7 @@ const Header = () => {
 
       <div  >
           <Link to="/"  className="logo">
-            Movie-Hub
+            Movies-Hub
           </Link>
       </div>
 
