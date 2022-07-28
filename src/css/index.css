@@ -366,3 +366,15 @@ input[type="radio"] {
     left: -5px;
     top: 5px;
 }
+.tit {
+    margin-top: 2rem;
+    font-family: 'Acme', sans-serif;
+    color: gold;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

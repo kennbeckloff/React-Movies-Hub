@@ -2,6 +2,7 @@ import { MOVIES_API } from "../api/config";
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 
+
 import { MoviesContext } from "../context/MoviesContext";
 
 import Movie from "./Movie";

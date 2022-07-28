@@ -20,7 +20,6 @@ const StarRating = ({rate}) => {
             }
             </>
         )
-
 }
 
 
