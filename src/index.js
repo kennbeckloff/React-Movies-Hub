@@ -1,15 +1,13 @@
 import React from 'react';
-import './css/index.css';
-import ReactDom from 'react-dom'
-import App from './App';
-import MoviesContextProvider from './context/MoviesContext.js'
-
-ReactDom.render(
+import ReactDOM from 'react-dom';import App from './App';
+import './css/index.css'
+import './css/notFound.css'
+import MoviesContextProvider from './context/MoviesContext'
+ReactDOM.render(
   <React.StrictMode>
     <MoviesContextProvider>
       <App />
     </MoviesContextProvider>
-  </React.StrictMode>
-)
-
-
+  </React.StrictMode>,
+  document.getElementById('root')
+);
