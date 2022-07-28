@@ -31,7 +31,7 @@ const  App =()  => {
           <Switch>
           < Route path="/" exact component={Home} />
           < Route path="/popular" exact component={Popular} />
-         
+          
           < Route path="/myFavorites" exact component={MyFavorites} />
            
             <Route
