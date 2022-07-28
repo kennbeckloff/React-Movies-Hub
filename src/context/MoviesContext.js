@@ -1,9 +1,35 @@
-import React from 'react'
+import React, {  useState,useEffect } from "react";
+import axios from "axios";
+import { SEARCH_API } from "../api/config";
 
-const MoviesContext = () => {
+export const   MoviesContext = React.createContext()  ;
+
+
+const MoviesContextProvider = props => {
+  const [movies ,setMovies ] = useState([]) 
+  const [myfavorites ,setMyfavorites] =useState([])
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const FavoriList = getMoviesFromStorage() ; 
+    setMyfavorites(FavoriList)
+  }, [])
+
+
+  const searchMovies = async (searchTerm) => {        
+    const searchRes =  await axios(SEARCH_API + searchTerm)
+    setMovies(searchRes.data.results)
+    setLoading(false);
+
+  }
+
+
+
   return (
-    <div>MoviesContext</div>
-  )
-}
+    <MoviesContext.Provider value={{ movies, loading, searchMovies , setMovies, setLoading }}>
+      {props.children}
+    </MoviesContext.Provider>
+  );
+};
 
-export default MoviesContext
+export default MoviesContextProvider;
