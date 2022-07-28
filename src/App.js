@@ -1,21 +1,12 @@
 import React from "react";
-// Module not found: Error: Can't resolve 'react-router-dom' in '/home/pmm/Development/code/phase-2/movies-hub/src'
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import { Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
+import {  Route, Switch , BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/Header";
+import MovieList from "./components/MovieList";
+import NotFound from "./components/NotFound";
 import Popular from "./components/Popular";
 import MyFavorites from "./components/MyFavorites";
-import MovieList from "./components/MovieList";
-import Header from "./components/Header";
-import NotFound from "./components/NotFound";
 
-
-// import {  Route, Switch , BrowserRouter as Router } from "react-router-dom";
-const Route = Requirements.Route;
-const Switch = Requirements.Switch;
-
-
+import Home from "./components/Home";
 
 const  App =()  => {
   const handleSubmit = (e, history, searchInput) => {
@@ -39,12 +30,14 @@ const  App =()  => {
           
           <Switch>
           < Route path="/" exact component={Home} />
-          < Route path="/popular" exact component={Popular} />         
+          < Route path="/popular" exact component={Popular} />
+         
           < Route path="/myFavorites" exact component={MyFavorites} />
            
             <Route
               path="/search/:searchInput"
-              render={props => (               
+              render={props => (
+               
                 <MovieList searchTerm={props.match.params.searchInput} />
               )}
             />
