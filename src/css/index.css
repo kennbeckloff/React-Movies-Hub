@@ -81,3 +81,11 @@
   top: calc(50% - 1.25em);
   left: calc(50% - 1.25em);
 }
+
+.movie {
+  transition: 350ms ease;
+  position: relative;
+  width: 250px;
+  margin: 0.6rem 2.2rem 1.4rem 0;
+  opacity: 0.9;  
+}
