@@ -5,9 +5,10 @@ import Form from "./Form";
 const Header = ({ history, handleSubmit }) => {
   return (
     <div  className="Navbar_field container">
+
       <div  >
           <Link to="/"  className="logo">
-            MoviesAPP
+            Movies-Hub
           </Link>
       </div>
 
