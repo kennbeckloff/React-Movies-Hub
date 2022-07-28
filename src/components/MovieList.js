@@ -11,7 +11,7 @@ const MovieList = ({ searchTerm }) => {
   }, [searchTerm,searchMovies]);
   
   return (
- 
+    <>
       {loading ? <Loader /> :
         <div className="movieList  container d-flex flex-wrap justify-content-center  mt-4" >
           {          
@@ -24,7 +24,8 @@ const MovieList = ({ searchTerm }) => {
             : <NoMovies />
           }
         </div>
-      } 
+      }
+    </>
 
   );
 };
