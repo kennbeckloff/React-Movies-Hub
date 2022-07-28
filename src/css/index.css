@@ -89,3 +89,63 @@
   margin: 0.6rem 2.2rem 1.4rem 0;
   opacity: 0.9;  
 }
+
+.Navbar_field form {
+  width: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Navbar_field form input {
+  width: 80%;
+  padding: 0.7rem;
+  border-radius: 6px;
+  outline: none;
+  padding-left: 0.9rem;
+  color: white;
+  background: transparent;
+  border: 1px solid var(--primary);
+  font-family: 'Roboto', sans-serif;
+}
+
+.Navbar_field form input::placeholder {
+  color: var(--light)
+}
+
+.Navbar_field form .searchBtn {
+  height: 49px;
+  padding: 0.4rem 0.8rem;
+  outline: none;
+  border-radius: 6px;
+  margin-top: 3px;
+  background-color: var(--primary);
+}
+
+.disBtn {
+  border-radius: 6px;
+  margin-top: 3px;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: var(--primary);
+  height: 49px;
+  padding: 0.4rem 0.8rem;
+  outline: none; 
+  background-color: #ffffff;
+  border: 3px solid var(--primary);
+}
+
+.Navbar_field form .searchBtn i {
+  color: white;
+}
+
+.Navbar_field ul {
+  display: flex;
+  align-items: center;
+  margin-top: 1.3rem;
+  padding: 0;
+}
+
+.Navbar_field ul li {
+  width: 125px;
+}
