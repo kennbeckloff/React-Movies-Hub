@@ -19,6 +19,7 @@ const  Popular =() =>  {
         },3000)
     }
     return (  
+      <>
 
         {  
         <div className="movieList  container d-flex flex-wrap justify-content-center  mt-4" >  
@@ -33,7 +34,7 @@ const  Popular =() =>  {
           }  
         </div>        
         }
-        
+        </>
             
     )
 }
