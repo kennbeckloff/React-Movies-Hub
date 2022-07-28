@@ -11,42 +11,54 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const Home = () => {
-  const { loading, setLoading} = useContext(MoviesContext)
+  const { loading, setLoading } = useContext(MoviesContext)
   const [allMovies, setAllMovies] = useState([])
-  useEffect(() =>
-    axios.get(`${MOVIES_API}/popular`).then(res => {
-      setAllMovies(res.data.results)
-    }).catch(
-      err => console.log(err)
-    ),
-    []
-  )
   useEffect(() => {
-    setLoading(false)
-  }
-  ) 
+
+    getMovies(MOVIES_API)
+
+  },[]);
+
+const getMovies = async () => {
+
+    const numberList =  Array(10).fill(2).map((v,i)=>i+2);
+    const bigData =[]
+
+    numberList.map( async (num) => {
+
+        const moviesJson = await axios(MOVIES_API+num);
+        const res = moviesJson.data.results;
+
+        res.forEach((json) => {
+
+          bigData.push(json)
+
+          if(bigData.length === 200 ) {
+            setAllMovies(bigData)
+          }
+
+        })
+
+    })  
+
+
+}
 
   return (
-    <div className="Home">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <h1>Popular Movies</h1>
+    <div className="  movieList  container d-flex flex-wrap justify-content-center  mt-4">
+      {
+        loading ? <Loader/>  : allMovies.map((movie) => {
+          return (
+            <Movie {...movie} key={uuidv4()} />
+          )
+        }
 
-            <div className="row">
-              {loading ? <Loader /> : allMovies.map(movie => (
-                <Movie key={uuidv4()} movie={movie} />
-                      
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+        )  
+      }
+
+    
     </div>
   );
 }
-
-
-
 
 export default Home;
