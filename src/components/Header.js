@@ -1,23 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Form from "./Form";
 
-
-
-const Header = () => {
+const Header = ({ history, handleSubmit }) => {
   return (
     <div  className="Navbar_field container">
-
       <div  >
           <Link to="/"  className="logo">
-            Movies-Hub
+            MoviesAPP
           </Link>
       </div>
 
-      <Form />
-
+      <Form history={history} handleSubmit={handleSubmit} />      
       <ul>
           <li >
                  <Link to="/popular" className="popular">
                     Popular
+
                 </Link>
             </li>
             <li >
@@ -25,13 +24,10 @@ const Header = () => {
                     My Favorites
                 </Link>
             </li>
-            <li >
-                <Link to="/topSearches" className="topSearches">
-                    Top Searches
-                </Link>
-            </li>
            
-        </ul>   
+        </ul>
+
+         
 
     </div>
   );

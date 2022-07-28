@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import './css/index.css';
+import ReactDom from 'react-dom'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import MoviesContextProvider from './context/MoviesContext.js'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDom.render(
   <React.StrictMode>
-    <App />
+    <MoviesContextProvider>
+      <App />
+    </MoviesContextProvider>
   </React.StrictMode>
-);
+)
 
 
-reportWebVitals();
