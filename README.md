@@ -7,9 +7,9 @@ Using The Movie Database Api to get list of Movies and reviews that that help mo
 ******
 
 ## Screenshots
- ![image](#)
- ![image](#)
- ![image](#)
+ ![](./src/images/Mdesc.png)
+ ![](./src/images/Mfav.png)
+ ![](./src/images/Mhome.png)
  
 ********
 ## SetUp Instruction
