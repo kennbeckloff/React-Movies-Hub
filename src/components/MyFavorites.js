@@ -18,10 +18,12 @@ const MyFavorites = () => {
 
         getMovie()
 
-    }, [])
+    }, [setLoading])
 
-    const getMovie = () => {       
-        const data = []        
+    const getMovie = () => {
+       
+        const data = []
+        
         myfavorites.map(async (movieID, index) => {
             const MOVIE_API = `https://api.themoviedb.org/3/movie/${movieID}?api_key=${apiKey}&language=en-US`
 
@@ -36,7 +38,7 @@ const MyFavorites = () => {
             }
 
         })
-    } 
+    }  
 
     return (
     <>
