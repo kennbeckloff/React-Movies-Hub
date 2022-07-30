@@ -41,12 +41,11 @@ const getMovies = async () => {
         })
 
     })  
-
     setTimeout(()=> {
 
-        setLoading(false);
+      setLoading(false);
 
-    },3000)
+  },3000)
 
 
 

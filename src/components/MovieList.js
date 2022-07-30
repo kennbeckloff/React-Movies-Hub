@@ -9,34 +9,27 @@ const MovieList = ({ searchTerm }) => {
   useEffect(() => {    
     searchMovies(searchTerm);
   }, [searchTerm,searchMovies]);
-    return (
+  
+  return (
     <>
-
       {loading ? <Loader /> :
-
         <div className="movieList  container d-flex flex-wrap justify-content-center  mt-4" >
-
-          {
-          
+          {          
             movies.length ?
-
               movies.map((movie) => {
                 return (
                   <Movie {...movie} key={movie.id}  />
                 )
               })
-
             : <NoMovies />
-
           }
-
         </div>
-
       }
-
     </>
 
   );
 };
 
 export default MovieList;
+
+
