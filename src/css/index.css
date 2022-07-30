@@ -397,3 +397,45 @@ input[type="radio"] {
     font-size: 20px;    
     color: black    
 }
+
+@media (min-width: 990px) and (max-width: 1390px) {
+    .Navbar_field,
+    .tit {
+        width: 855px;
+    }
+    .Navbar_field ul li {
+        width: 100px !important;
+    }
+    .myFavorites {
+        font-size: 1.3rem !important;
+    }
+    .popular {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 994px) {
+
+    .Navbar_field form {
+        display: none !important;
+    }
+    .movieList {
+        position: relative;
+        min-height: 600px;
+    }
+    .movie {
+        width: 250px;
+        margin: 2.5rem;
+        opacity: 0.9;
+        transition: 350ms ease;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .Navbar_field ul li {
+        display: none
+    }
+    .Navbar_field {
+        padding-top: 10px;
+    }
+}
