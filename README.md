@@ -43,7 +43,7 @@ You may also see any lint errors in the console.
 
 *****
 ## Live Link
-Or you can access the web application directly via this [LINK.]([https://react-movies-hub.vercel.app/])
+Or you can access the web application directly via this [https://react-movies-hub.vercel.app/]
 *****
 
 ## Technologies Used
